@@ -9,11 +9,22 @@ import SwiftUI
 
 struct ContentView: View
 {
-//    @StateObject var gameState = GameState()
+    @StateObject var gameState = GameState()
     
     var body: some View
     {
         let borderSize = CGFloat(5)
+        
+                Text(gameState.turnText())
+                    .font(.title)
+                    .bold()
+                    .padding()
+                Spacer()
+        
+                Text(String(format: "Crosses: %d", gameState.crossesScore))
+                    .font(.title)
+                    .bold()
+                    .padding()
         
         VStack(spacing: borderSize)
         {
@@ -26,16 +37,18 @@ struct ContentView: View
                     {
                         column in
                         
-//                        let cell = gameState.board[row][column]
+                        let cell = gameState.board[row][column]
                         
-                        Text("X")
+                        Text(cell.displayTile())
                             .font(.system(size: 60))
-//                            .foregroundColor(cell.tileColor())
+                            .foregroundColor(cell.tileColor())
                             .bold()
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .aspectRatio(1, contentMode: .fit)
                             .background(Color.white)
-                           
+                            .onTapGesture {
+                                gameState.placeTile(row, column)
+                            }
                     }
                 }
                 
@@ -43,6 +56,22 @@ struct ContentView: View
         }
         .background(Color.black)
         .padding()
+        .alert(isPresented: $gameState.showAlert)
+        {
+            Alert(
+                title: Text(gameState.alertMessage),
+                dismissButton: .default(Text("Okay"))
+                {
+                    gameState.resetBoard()
+                }
+            )
+        }
+
+        Text(String(format: "Noughts: %d", gameState.noughtsScore))
+            .font(.title)
+            .bold()
+            .padding()
+        Spacer()
 
     }
 }
