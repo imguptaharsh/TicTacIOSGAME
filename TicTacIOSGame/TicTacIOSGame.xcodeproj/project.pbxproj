@@ -15,6 +15,7 @@
 		5869A0C729E8769F00336528 /* TicTacIOSGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869A0C629E8769F00336528 /* TicTacIOSGameUITests.swift */; };
 		5869A0C929E8769F00336528 /* TicTacIOSGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869A0C829E8769F00336528 /* TicTacIOSGameUITestsLaunchTests.swift */; };
 		5869A0D629E8789C00336528 /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869A0D529E8789C00336528 /* cell.swift */; };
+		5869A0D829E87B5B00336528 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869A0D729E87B5B00336528 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5869A0C629E8769F00336528 /* TicTacIOSGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacIOSGameUITests.swift; sourceTree = "<group>"; };
 		5869A0C829E8769F00336528 /* TicTacIOSGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacIOSGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5869A0D529E8789C00336528 /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
+		5869A0D729E87B5B00336528 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				5869A0AB29E8769C00336528 /* TicTacIOSGameApp.swift */,
 				5869A0AD29E8769C00336528 /* ContentView.swift */,
+				5869A0D729E87B5B00336528 /* GameState.swift */,
 				5869A0D529E8789C00336528 /* cell.swift */,
 				5869A0AF29E8769F00336528 /* Assets.xcassets */,
 				5869A0B129E8769F00336528 /* Preview Content */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5869A0AE29E8769C00336528 /* ContentView.swift in Sources */,
+				5869A0D829E87B5B00336528 /* GameState.swift in Sources */,
 				5869A0D629E8789C00336528 /* cell.swift in Sources */,
 				5869A0AC29E8769C00336528 /* TicTacIOSGameApp.swift in Sources */,
 			);
